@@ -201,7 +201,6 @@ async function getRecommendations() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "X-CSRFToken": "{{ csrf_token }}"
             },
             body: JSON.stringify({
                 preference: preference
