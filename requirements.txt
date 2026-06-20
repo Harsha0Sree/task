@@ -13,7 +13,9 @@ anyio==4.14.0 \
 asgiref==3.11.1 \
     --hash=sha256:5f184dc43b7e763efe848065441eac62229c9f7b0475f41f80e207a114eda4ce \
     --hash=sha256:e8667a091e69529631969fd45dc268fa79b99c92c5fcdda727757e52146ec133
-    # via django
+    # via
+    #   django
+    #   django-cors-headers
 certifi==2026.6.17 \
     --hash=sha256:024c88eeec92ca068db80f02b8b07c9cef7b9fe261d1d535abfd5abd6f6af432 \
     --hash=sha256:2227dcbaafe0d2f59279d1762ddddc37783ed4354594f194ffc31d20f41fc3db
@@ -100,6 +102,12 @@ distro==1.9.0 \
 django==6.0.6 \
     --hash=sha256:25148b1194c47c2e685e5f5e9c5d59c78b075dfd282cb9618861ba6c1708f4d2 \
     --hash=sha256:ad03916ba59523d781ae5c3f631960c23d69a9d9c43cecda52fc23b47e953713
+    # via
+    #   django-cors-headers
+    #   spearmint-task
+django-cors-headers==4.9.0 \
+    --hash=sha256:15c7f20727f90044dcee2216a9fd7303741a864865f0c3657e28b7056f61b449 \
+    --hash=sha256:fe5d7cb59fdc2c8c646ce84b727ac2bca8912a247e6e68e1fb507372178e59e8
     # via spearmint-task
 gunicorn==26.0.0 \
     --hash=sha256:40233d26a5f0d1872916188c276e21641155111c2853f0c2cd55260aec0d24fc \
