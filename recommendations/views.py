@@ -71,12 +71,11 @@ User request:
 {preference}
 
 Recommend ONLY products from the list.
-if there are no products in the specified range say so and apologise to the user
-Return EXACTLY in this format:
 
-## Recommendations
+If matching products exist, return:
 
 ### Product Name
+
 Price: $XXX
 
 Why it matches:
@@ -84,16 +83,25 @@ Why it matches:
 - Reason 2
 
 ### Product Name
+
 Price: $XXX
 
 Why it matches:
 - Reason 1
 - Reason 2
+
+If no matching products exist, return ONLY:
+
+Sorry, there are no products matching your requirements.
+
+Do NOT output:
+- Recommendations
+- ## Recommendations
+- Any introduction
+- Any conclusion
 
 Maximum 2 products.
-Do not write any introduction text.
-Do not write 'Here are recommendations'.
-Use proper markdown line breaks.
+Use proper markdown.
 """
     try:
         response = client.chat.completions.create(

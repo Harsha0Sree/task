@@ -211,9 +211,13 @@ async function getRecommendations() {
 
         if (data.recommendations) {
 
-            recommendationBox.innerHTML =
-                marked.parse(data.recommendations);
+           let text = data.recommendations || "";
 
+            text = text.replace(/^##\s*Recommendations\s*/i, "");
+            text = text.replace(/^#\s*Recommendations\s*/i, "");
+
+            recommendationBox.innerHTML =
+                marked.parse(text);
         } else {
 
             recommendationBox.innerHTML =
